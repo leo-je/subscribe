@@ -232,6 +232,8 @@ proxy-groups:
     type: select
     proxies:
       - 提交专用
+      - REJECT
+      - DIRECT
 rules:
  - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
