@@ -194,7 +194,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - ♻️ 自动选择
-   - name: 提交
+  - name: 提交
     type: select
     proxies:
       - 提交专用     
