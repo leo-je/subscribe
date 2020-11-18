@@ -228,6 +228,10 @@ proxy-groups:
       - 🇺🇲 美国_欢迎订阅Youtube顺丰资源
       - 🇷🇺 俄罗斯_欢迎订阅Youtube顺丰资源
       - 欧洲_欢迎订阅Youtube顺丰资源 16
+  - name: 提交
+    type: select
+    proxies:
+      - 提交专用
 rules:
  - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
