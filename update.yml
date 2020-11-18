@@ -197,7 +197,7 @@ proxy-groups:
   - name: 提交
     type: select
     proxies:
-      - 提交专用     
+      - 提交专用
   - name: 🛑 全球拦截
     type: select
     proxies:
