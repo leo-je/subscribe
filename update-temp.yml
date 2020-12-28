@@ -6,6 +6,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 圣何塞, server: 142.4.123.34, port: 8080, type: vmess, uuid: a671c87a-7a3b-41f1-ba62-da032175ea96, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 142.4.123.34}, headers: {Host: 142.4.123.34}}
+  - {name: 荷兰, server: 154.84.1.140, port: 54671, type: vmess, uuid: 2a7349d6-994a-434b-9589-c0020685e528, alterId: 64, cipher: auto, tls: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,12 +14,14 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 圣何塞
+      - 荷兰
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 圣何塞
+      - 荷兰
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -26,24 +29,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 圣何塞
+      - 荷兰
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 圣何塞
+      - 荷兰
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 圣何塞
+      - 荷兰
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 圣何塞
+      - 荷兰
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -51,6 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 圣何塞
+      - 荷兰
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -74,6 +82,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 圣何塞
+      - 荷兰
 rules:
  - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
