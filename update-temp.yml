@@ -6,6 +6,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 荷兰, server: 154.84.1.140, port: 54671, type: vmess, uuid: 2a7349d6-994a-434b-9589-c0020685e528, alterId: 64, cipher: auto, tls: false}
+  - {name: 🇰🇷 首尔-联通混淆, server: 140.238.17.12, port: 80, type: vmess, uuid: 203ef169-ad8a-4d16-89cc-8b49003e193d, alterId: 64, cipher: auto, tls: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
