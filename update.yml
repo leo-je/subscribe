@@ -5,213 +5,197 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 顺丰资源YouTube, server: 89.187.161.239, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 顺丰资源YouTube 2, server: 89.187.161.241, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 顺丰资源YouTube 3, server: 172.67.186.204, port: 443, type: vmess, uuid: f299184b-19e0-41a4-9b4b-65fa8f0e691c, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /jj, ws-headers: {Host: c-jp1.ooxc.cc}}
-  - {name: 顺丰资源YouTube 4, server: 89.187.161.241, port: 37473, type: ss, cipher: aes-256-gcm, password: enctdKyJfSu76VqznKwTt6Ap}
-  - {name: 顺丰资源YouTube 5, server: 89.187.187.147, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 顺丰资源YouTube 6, server: 89.187.187.149, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: 顺丰资源YouTube 7, server: 84.17.41.71, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 顺丰资源YouTube 8, server: 89.187.187.149, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 顺丰资源YouTube 9, server: 89.187.187.88, port: 35294, type: ss, cipher: aes-256-gcm, password: J9Y2ncrdPEC38gwydNFFGBna}
-  - {name: 顺丰资源YouTube 10, server: 89.187.187.149, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 顺丰资源YouTube 11, server: 89.187.169.119, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 顺丰资源YouTube 12, server: tacotasty.tk, port: 443, type: trojan, password: 196ca8d6-0d32-4e52-a4de-0fb23be82658, sni: tacotasty.tk}
-  - {name: 顺丰资源YouTube 13, server: 89.187.174.231, port: 37588, type: ss, cipher: aes-256-gcm, password: kD9vkjnE6dsUzwQfvKkPkQAd}
-  - {name: 顺丰资源YouTube 14, server: 84.17.53.208, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 顺丰资源YouTube 15, server: 87.101.94.215, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 顺丰资源YouTube 16, server: 84.17.53.168, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 顺丰资源YouTube 17, server: 84.17.53.221, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 顺丰资源YouTube 18, server: 84.17.53.166, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 顺丰资源YouTube 19, server: 84.17.53.166, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: 顺丰资源YouTube 20, server: 84.17.43.183, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: 顺丰资源YouTube 21, server: 84.17.34.26, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: 1-1, server: hn3.dywr.org, port: 10090, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-2, server: hn.dywr.org, port: 10088, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-3, server: global-transit-02-sg.baipiao.de, port: 1123, type: vmess, uuid: bf8b5ba7-c3e8-3694-95b9-27a606055479, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: global-transit-02-sg.baipiao.de}}
+  - {name: 1-19, server: 23.225.125.86, port: 443, type: vmess, uuid: 8fb921c0-564d-4d5a-9b13-384c01820126, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /footers, ws-headers: {Host: www.56626173.xyz}}
+  - {name: 1-16, server: 37.120.194.107, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
+  - {name: 1-4, server: hn-sg1.dywr.org, port: 10087, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-5, server: hn3.dywr.org, port: 10089, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-18, server: 154.84.1.65, port: 443, type: vmess, uuid: 14505ea6-2314-4a0b-8859-8562bb82a176, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /footers, ws-headers: {Host: www.56726769.xyz}}
+  - {name: 1-17, server: 185.76.9.41, port: 31764, type: ss, cipher: aes-256-gcm, password: YgusH2MWA8PWc3p2VDsR7AVv}
+  - {name: 1-6, server: sd-hk2.dotunnel.monster, port: 10088, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-7, server: fs-sg1.dywr.org, port: 10087, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-8, server: cn2.dywr.org, port: 10087, type: vmess, uuid: 9181099b-ce67-341a-bec4-9b16ed1a54df, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1-9, server: xg02.v2raya.xyz, port: 30009, type: vmess, uuid: 3e5d099c-320c-388e-b6fb-70dd408e4485, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: xg02.v2raya.xyz}}
+  - {name: 1-10, server: xg01.v2raya.xyz, port: 30008, type: vmess, uuid: 3e5d099c-320c-388e-b6fb-70dd408e4485, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: xg01.v2raya.xyz}}
+  - {name: 1-11, server: global-transit-02-jp.baipiao.de, port: 114, type: vmess, uuid: bf8b5ba7-c3e8-3694-95b9-27a606055479, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: global-transit-02-jp.baipiao.de}}
+  - {name: 1-12, server: global-transit-02-jp.baipiao.de, port: 112, type: vmess, uuid: bf8b5ba7-c3e8-3694-95b9-27a606055479, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: global-transit-02-jp.baipiao.de}}
+  - {name: 1-13, server: global-transit-02-jp.baipiao.de, port: 107, type: vmess, uuid: bf8b5ba7-c3e8-3694-95b9-27a606055479, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: global-transit-02-jp.baipiao.de}}
+  - {name: 1-14, server: global-transit-02-sg.baipiao.de, port: 1122, type: vmess, uuid: bf8b5ba7-c3e8-3694-95b9-27a606055479, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: global-transit-02-sg.baipiao.de}}
+  - {name: 1-15, server: global-cdn-sg-01.baipiao.de, port: 443, type: vmess, uuid: bf8b5ba7-c3e8-3694-95b9-27a606055479, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /pucloud, ws-headers: {Host: l1-sg-a-01.pucdn.me}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -234,29 +218,27 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 顺丰资源YouTube
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 3
-      - 顺丰资源YouTube 4
-      - 顺丰资源YouTube 5
-      - 顺丰资源YouTube 6
-      - 顺丰资源YouTube 7
-      - 顺丰资源YouTube 8
-      - 顺丰资源YouTube 9
-      - 顺丰资源YouTube 10
-      - 顺丰资源YouTube 11
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 13
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 15
-      - 顺丰资源YouTube 16
-      - 顺丰资源YouTube 17
-      - 顺丰资源YouTube 18
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 20
-      - 顺丰资源YouTube 21
+      - 1-1
+      - 1-2
+      - 1-3
+      - 1-19
+      - 1-16
+      - 1-4
+      - 1-5
+      - 1-18
+      - 1-17
+      - 1-6
+      - 1-7
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
 rules:
- - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
+ - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
  - DOMAIN-SUFFIX,local,🎯 全球直连
@@ -266,7 +248,6 @@ rules:
  - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
  - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
- - IP-CIDR,198.18.0.0/16,🎯 全球直连,no-resolve
  - IP-CIDR6,::1/128,🎯 全球直连,no-resolve
  - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
  - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
@@ -283,11 +264,10 @@ rules:
  - DOMAIN-SUFFIX,tendawifi.com,🎯 全球直连
  - DOMAIN-SUFFIX,zte.home,🎯 全球直连
  - DOMAIN-SUFFIX,ol.epicgames.com,🎯 全球直连
- - DOMAIN-SUFFIX,dizhensubao.getui.com,🎯 全球直连
  - DOMAIN,dl.google.com,🎯 全球直连
+ - DOMAIN,mtalk.google.com,🎯 全球直连
  - DOMAIN-SUFFIX,googletraveladservices.com,🎯 全球直连
  - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net,🎯 全球直连
- - DOMAIN,origin-a.akamaihd.net,🎯 全球直连
  - DOMAIN,livew.l.qq.com,🎯 全球直连
  - DOMAIN,vd.l.qq.com,🎯 全球直连
  - DOMAIN,analytics.strava.com,🎯 全球直连
@@ -938,6 +918,7 @@ rules:
  - DOMAIN-SUFFIX,oimagea2.ydstatic.com,🍃 应用净化
  - DOMAIN-SUFFIX,pagechoice.net,🍃 应用净化
  - DOMAIN-SUFFIX,prom.gome.com.cn,🍃 应用净化
+ - DOMAIN-SUFFIX,push.126.net,🍃 应用净化
  - DOMAIN-SUFFIX,qchannel0d.cn,🍃 应用净化
  - DOMAIN-SUFFIX,qt002x.corp.youdao.com,🍃 应用净化
  - DOMAIN-SUFFIX,rlogs.youdao.com,🍃 应用净化
@@ -1174,6 +1155,7 @@ rules:
  - DOMAIN-SUFFIX,mobads.baidu.cn,🍃 应用净化
  - DOMAIN-SUFFIX,mobads.baidu.com,🍃 应用净化
  - DOMAIN-SUFFIX,mpro.baidu.com,🍃 应用净化
+ - DOMAIN-SUFFIX,msite.baidu.com,🍃 应用净化
  - DOMAIN-SUFFIX,mtj.baidu.cn,🍃 应用净化
  - DOMAIN-SUFFIX,mtj.baidu.com,🍃 应用净化
  - DOMAIN-SUFFIX,neirong.baidu.com,🍃 应用净化
@@ -1344,7 +1326,8 @@ rules:
  - DOMAIN-SUFFIX,policy.jd.com,🍃 应用净化
  - DOMAIN-SUFFIX,stat.m.jd.com,🍃 应用净化
  - DOMAIN-SUFFIX,ads.service.kugou.com,🍃 应用净化
- - DOMAIN-SUFFIX,adsfile.bssdlbig.kugou.com,🍃 应用净化
+ - DOMAIN-SUFFIX,bssdl.kugou.com,🍃 应用净化
+ - DOMAIN-SUFFIX,bssdlbig.kugou.com,🍃 应用净化
  - DOMAIN-SUFFIX,d.kugou.com,🍃 应用净化
  - DOMAIN-SUFFIX,downmobile.kugou.com,🍃 应用净化
  - DOMAIN-SUFFIX,gad.kugou.com,🍃 应用净化
@@ -2004,6 +1987,19 @@ rules:
  - DOMAIN-SUFFIX,googletagservices.com,🎯 全球直连
  - DOMAIN-SUFFIX,gtm.oasisfeng.com,🎯 全球直连
  - DOMAIN-SUFFIX,imasdk.googleapis.com,🎯 全球直连
+ - DOMAIN-SUFFIX,kh.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm.googleapis.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm0.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm0.googleapis.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm1.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm1.googleapis.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm2.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm2.googleapis.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm3.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khm3.googleapis.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khmdb.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,khmdb.googleapis.com,🎯 全球直连
  - DOMAIN-SUFFIX,mtalk.google.com,🎯 全球直连
  - DOMAIN-SUFFIX,ocsp.pki.goog,🎯 全球直连
  - DOMAIN-SUFFIX,recaptcha.net,🎯 全球直连
@@ -2170,17 +2166,23 @@ rules:
  - DOMAIN-SUFFIX,bahamut.com.tw,🌍 国外媒体
  - DOMAIN-SUFFIX,gamer.com.tw,🌍 国外媒体
  - DOMAIN-SUFFIX,hinet.net,🌍 国外媒体
- - DOMAIN-KEYWORD,livedazn,🌍 国外媒体
  - DOMAIN-KEYWORD,voddazn,🌍 国外媒体
  - DOMAIN,d151l6v8er5bdm.cloudfront.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,control.kochava.com,🌍 国外媒体
  - DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,d1sgwhnao7452x.cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,dazn-api.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dazn.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dazndn.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,dc2-vodhls-perform.secure.footprint.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,dca-ll-livedazn-dznlivejp.s.llnwi.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,dca-ll-voddazn-dznvodjp.s.llnwi.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,dcalivedazn.akamaized.net,🌍 国外媒体
  - DOMAIN-SUFFIX,dcblivedazn.akamaized.net,🌍 国外媒体
  - DOMAIN-SUFFIX,indazn.com,🌍 国外媒体
  - DOMAIN-SUFFIX,indaznlab.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,intercom.io,🌍 国外媒体
+ - DOMAIN-SUFFIX,s.yimg.jp,🌍 国外媒体
  - DOMAIN-SUFFIX,sentry.io,🌍 国外媒体
  - DOMAIN-SUFFIX,deezer.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dzcdn.net,🌍 国外媒体
@@ -2222,23 +2224,19 @@ rules:
  - DOMAIN-SUFFIX,akamaized.net,🌍 国外媒体
  - DOMAIN-SUFFIX,foxplus.com,🌍 国外媒体
  - DOMAIN-SUFFIX,theplatform.com,🌍 国外媒体
- - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🌍 国外媒体
- - DOMAIN,bcbolthboa-a.akamaihd.net,🌍 国外媒体
- - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🌍 国外媒体
- - DOMAIN,dai3fd1oh325y.cloudfront.net,🌍 国外媒体
- - DOMAIN,hboasia1-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia2-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia3-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia4-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia5-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,players.brightcove.net,🌍 国外媒体
- - DOMAIN,s3-ap-southeast-1.amazonaws.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,bcbolthboa-a.akamaihd.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,cf-images.ap-southeast-1.prod.boltdns.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbo.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,hboasia.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbogo.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbogoasia.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbogoasia.hk,🌍 国外媒体
  - DOMAIN-SUFFIX,hbomax.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbonow.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,manifest.prod.boltdns.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,s3-ap-southeast-1.amazonaws.com,🌍 国外媒体
  - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🌍 国外媒体
  - DOMAIN,bcbolthboa-a.akamaihd.net,🌍 国外媒体
  - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🌍 国外媒体
@@ -2263,8 +2261,8 @@ rules:
  - DOMAIN-SUFFIX,hulustream.com,🌍 国外媒体
  - DOMAIN-SUFFIX,happyon.jp,🌍 国外媒体
  - DOMAIN-SUFFIX,hulu.jp,🌍 国外媒体
- - DOMAIN-SUFFIX,prod.hjholdings.tv,🌍 国外媒体
  - DOMAIN-SUFFIX,streaks.jp,🌍 国外媒体
+ - DOMAIN-SUFFIX,yahoo.co.jp,🌍 国外媒体
  - DOMAIN-SUFFIX,yb.uncn.jp,🌍 国外媒体
  - DOMAIN,itvpnpmobile-a.akamaihd.net,🌍 国外媒体
  - DOMAIN-SUFFIX,itv.com,🌍 国外媒体
@@ -2300,8 +2298,6 @@ rules:
  - DOMAIN,mytvsuperlimited.sc.omtrdc.net,🌍 国外媒体
  - DOMAIN-SUFFIX,mytvsuper.com,🌍 国外媒体
  - DOMAIN-SUFFIX,tvb.com,🌍 国外媒体
- - DOMAIN-KEYWORD,dualstack.apiproxy-device-prod-nlb-,🌍 国外媒体
- - DOMAIN-KEYWORD,dualstack.ichnaea-web-,🌍 国外媒体
  - DOMAIN,netflix.com.edgesuite.net,🌍 国外媒体
  - DOMAIN-SUFFIX,fast.com,🌍 国外媒体
  - DOMAIN-SUFFIX,netflix.com,🌍 国外媒体
@@ -2344,6 +2340,7 @@ rules:
  - DOMAIN-SUFFIX,dmc.nico,🌍 国外媒体
  - DOMAIN-SUFFIX,nicovideo.jp,🌍 国外媒体
  - DOMAIN-SUFFIX,nimg.jp,🌍 国外媒体
+ - DOMAIN-SUFFIX,socdm.com,🌍 国外媒体
  - DOMAIN-SUFFIX,pbs.org,🌍 国外媒体
  - DOMAIN-SUFFIX,pandora.com,🌍 国外媒体
  - DOMAIN-SUFFIX,phncdn.com,🌍 国外媒体
@@ -2399,6 +2396,7 @@ rules:
  - DOMAIN-KEYWORD,youtube,🌍 国外媒体
  - DOMAIN,youtubei.googleapis.com,🌍 国外媒体
  - DOMAIN,yt3.ggpht.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,app-measurement.com,🌍 国外媒体
  - DOMAIN-SUFFIX,googlevideo.com,🌍 国外媒体
  - DOMAIN-SUFFIX,gvt2.com,🌍 国外媒体
  - DOMAIN-SUFFIX,youtu.be,🌍 国外媒体
@@ -2654,24 +2652,6 @@ rules:
  - DOMAIN-SUFFIX,ytimg.com,🚀 节点选择
  - IP-CIDR,74.125.0.0/16,🚀 节点选择,no-resolve
  - IP-CIDR,173.194.0.0/16,🚀 节点选择,no-resolve
- - IP-CIDR,120.232.181.162/32,🚀 节点选择,no-resolve
- - IP-CIDR,120.241.147.226/32,🚀 节点选择,no-resolve
- - IP-CIDR,120.253.253.226/32,🚀 节点选择,no-resolve
- - IP-CIDR,120.253.255.162/32,🚀 节点选择,no-resolve
- - IP-CIDR,120.253.255.34/32,🚀 节点选择,no-resolve
- - IP-CIDR,120.253.255.98/32,🚀 节点选择,no-resolve
- - IP-CIDR,180.163.150.162/32,🚀 节点选择,no-resolve
- - IP-CIDR,180.163.150.34/32,🚀 节点选择,no-resolve
- - IP-CIDR,180.163.151.162/32,🚀 节点选择,no-resolve
- - IP-CIDR,180.163.151.34/32,🚀 节点选择,no-resolve
- - IP-CIDR,203.208.39.0/24,🚀 节点选择,no-resolve
- - IP-CIDR,203.208.40.0/24,🚀 节点选择,no-resolve
- - IP-CIDR,203.208.41.0/24,🚀 节点选择,no-resolve
- - IP-CIDR,203.208.43.0/24,🚀 节点选择,no-resolve
- - IP-CIDR,203.208.50.0/24,🚀 节点选择,no-resolve
- - IP-CIDR,220.181.174.162/32,🚀 节点选择,no-resolve
- - IP-CIDR,220.181.174.226/32,🚀 节点选择,no-resolve
- - IP-CIDR,220.181.174.34/32,🚀 节点选择,no-resolve
  - DOMAIN-SUFFIX,cdninstagram.com,🚀 节点选择
  - DOMAIN-SUFFIX,instagram.com,🚀 节点选择
  - DOMAIN-SUFFIX,instagr.am,🚀 节点选择
