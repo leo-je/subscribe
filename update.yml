@@ -79,18 +79,6 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
