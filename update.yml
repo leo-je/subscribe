@@ -19,7 +19,7 @@ proxies:
   - {name: 🇯🇵 日本 BGP 13, server: cncn.blackhole02.site, port: 115, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
   - {name: 🇸🇬 狮城 BGP 11, server: cncn.blackhole02.site, port: 133, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
   - {name: 🇸🇬 狮城 BGP 12, server: cncn.blackhole02.site, port: 134, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
-  - {name: 代码提交, server: 10.19.2.5, port: 48629, type: vmess, uuid: 4d32a05b-91fb-11eb-b467-286ed498c641, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /dx6qZtEv/, ws-headers: {Host: bitbucket.caih.local}}
+  - {name: 代码提交, server: 10.19.2.5, port: 48629, type: vmess, uuid: 4d32a05b-91fb-11eb-b467-286ed498c641, alterId: 0, cipher: auto, tls: false}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -38,7 +38,6 @@ proxy-groups:
       - 🇨🇳 台湾 BGP 03
       - 🇸🇬 狮城 BGP 11
       - 🇸🇬 狮城 BGP 12
-      - 代码提交
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -56,7 +55,6 @@ proxy-groups:
       - 🇨🇳 台湾 BGP 03
       - 🇸🇬 狮城 BGP 11
       - 🇸🇬 狮城 BGP 12
-      - 代码提交
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -75,7 +73,6 @@ proxy-groups:
       - 🇨🇳 台湾 BGP 03
       - 🇸🇬 狮城 BGP 11
       - 🇸🇬 狮城 BGP 12
-      - 代码提交
   - name: 🌏 国内媒体
     type: select
     proxies:
