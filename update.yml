@@ -165,8 +165,8 @@ proxy-groups:
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
+ - IP-CIDR,10.12.0.0/8,工作网络,no-resolve
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
- - IP-CIDR,10.12.0.0/16,工作网络,no-resolve
  - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
  - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
  - IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
