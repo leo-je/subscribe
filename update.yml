@@ -10,15 +10,6 @@ proxies:
   - {name: 顺丰资源YouTube 14, server: 66.115.182.72, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
   - {name: 顺丰资源YouTube 19, server: 91.206.168.19, port: 31572, type: ss, cipher: aes-256-gcm, password: n8w4StnbVD9dmXYn4Ajt87EA}
   - {name: 顺丰资源YouTube 23, server: 194.41.112.11, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: 🇯🇵 日本 Pro 11, server: cncn2.blackhole02.site, port: 211, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn2.blackhole02.site}}
-  - {name: 🇯🇵 日本 Pro 12, server: cncn2.blackhole02.site, port: 212, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn2.blackhole02.site}}
-  - {name: 🇺🇸 美国 Pro 11, server: cncn2.blackhole02.site, port: 333, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn2.blackhole02.site}}
-  - {name: 🇨🇳 台湾 BGP 02, server: 120.gzcm.blackhole02.site, port: 234, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 120.gzcm.blackhole02.site}}
-  - {name: 🇨🇳 台湾 BGP 03, server: 120.gzcm.blackhole02.site, port: 235, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 120.gzcm.blackhole02.site}}
-  - {name: 🇯🇵 日本 BGP 12, server: cncn.blackhole02.site, port: 114, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
-  - {name: 🇯🇵 日本 BGP 13, server: cncn.blackhole02.site, port: 115, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
-  - {name: 🇸🇬 狮城 BGP 11, server: cncn.blackhole02.site, port: 133, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
-  - {name: 🇸🇬 狮城 BGP 12, server: cncn.blackhole02.site, port: 134, type: vmess, uuid: 00e7cc76-8e6a-46e8-b455-6c8d09876dba, alterId: 3, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: cncn.blackhole02.site}}
   - {name: 代码提交, server: 10.19.2.5, port: 48629, type: vmess, uuid: 4d32a05b-91fb-11eb-b467-286ed498c641, alterId: 0, cipher: auto, tls: false}
 proxy-groups:
   - name: 🔰 节点选择
@@ -31,13 +22,6 @@ proxy-groups:
       - 顺丰资源YouTube 14
       - 顺丰资源YouTube 19
       - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -48,31 +32,12 @@ proxy-groups:
       - 顺丰资源YouTube 14
       - 顺丰资源YouTube 19
       - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -83,53 +48,17 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 顺丰资源YouTube 2
-      - 顺丰资源YouTube 12
-      - 顺丰资源YouTube 14
-      - 顺丰资源YouTube 19
-      - 顺丰资源YouTube 23
-      - 🇯🇵 日本 Pro 11
-      - 🇯🇵 日本 Pro 12
-      - 🇺🇸 美国 Pro 11
-      - 🇨🇳 台湾 BGP 02
-      - 🇨🇳 台湾 BGP 03
-      - 🇸🇬 狮城 BGP 11
-      - 🇸🇬 狮城 BGP 12
   - name: 工作网络
     type: select
     proxies:
