@@ -81,7 +81,8 @@ proxy-groups:
       - ♻️ 自动选择
 rules:
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
- - IP-CIDR,10.12.0.0/8,工作网络,no-resolve
+ - IP-CIDR,10.12.0.0/16,工作网络,no-resolve
+ - IP-CIDR,10.10.0.0/16,工作网络,no-resolve
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
  - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
  - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
@@ -10103,6 +10104,7 @@ rules:
  - DOMAIN-SUFFIX,zhihuishu.com,🎯 全球直连
  - DOMAIN-SUFFIX,zhimg.com,🎯 全球直连
  - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
+ - DOMAIN-SUFFIX,caih.com,🎯 全球直连
  - DOMAIN,download.jetbrains.com,🎯 全球直连
  - DOMAIN,images-cn.ssl-images-amazon.com,🎯 全球直连
  - DOMAIN,bitbucket.caih.local,工作网络
