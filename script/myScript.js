@@ -145,9 +145,11 @@ async function clockinPcBeta(app) {
             url: 'http://bbs.pcbeta.com/home.php?mod=task&do=apply&id=149',
             headers: {
                 Cookie: cv,
-            }
+            },
+            body:'[]'
         };
-        app.get(JDBUrl, async function (error, response, data) {
+        console.log(JSON.stringify($))
+        $.get(JDBUrl, async function (error, response, data) {
                 console.log(data)
                 try {
                     if (error) {
@@ -171,7 +173,7 @@ async function clockinPcBeta(app) {
 }
 
 async function start() {
-    console.log("myScript:==================== version 4.4.8 ==================");
+    console.log("myScript:==================== version 4.4.9 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
@@ -180,6 +182,7 @@ async function start() {
     console.log("app end")
 }
 
+const $ = new Env("pcBeta签到");
 start();
 
 
