@@ -161,12 +161,12 @@ function clockinPcBeta(app) {
 }
 
 async function start() {
-    console.log("myScript:==================== version 4.4.2 ==================");
+    console.log("myScript:==================== version 4.4.3 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
     GetCookie(app);
-    await Promise.all([clockinPcBeta(app)]);
+    await clockinPcBeta(app);
 }
 
 start();
