@@ -110,7 +110,7 @@ function GetCookie(app) {
                 //const cookiepcBeta = $nobyda.read('CookiepcBeta');
                 let WT = '';
                 WT = app.write(CV, `CookiepcBeta`);
-                app.notify(`用户名: ${acObj.userName}`, ``, `${status == 2 ? `更新` : `写入`}京东 [账号${seatNo + 1}] Cookie${WT ? `成功 🎉` : `失败 ‼️`}`)
+                app.notify(`pcBeta`, ``, `保存cookie成功`)
             }
         } else if ($request.url === 'http://www.apple.com/') {
             app.notify("pcBeta", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
