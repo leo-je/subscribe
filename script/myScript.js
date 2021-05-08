@@ -128,8 +128,44 @@ function GetCookie(app) {
     }
 }
 
-console.log("myScript:==================== version 4.3 ==================");
-var app = applicationContext()
-console.log("isSurge:" + app.isSurge);
-console.log("isRequest:" + app.isRequest);
-GetCookie(app);
+function clockinPcBeta(app) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            const JDBUrl = {
+                url: 'http://bbs.pcbeta.com/home.php?mod=task&do=apply&id=149',
+                headers: {
+                    Cookie: app.read("CookiepcBeta")
+                },
+                body: 'functionId=signBeanIndex&appid=ld'
+            };
+            app.get(JDBUrl, function (error, response, data) {
+                try {
+                    if (error) {
+                        throw new Error(error)
+                    } else {
+                        console.log(data);
+                        app.notify("pcBeta", "", '签到成功')
+                    }
+                } catch (eor) {
+                    app.notify("pcBeta", "", '签到失败', eor)
+                } finally {
+                    resolve()
+                }
+            })
+        }, s)
+        if (1) setTimeout(resolve, out + s)
+    });
+}
+
+async function start() {
+    console.log("myScript:==================== version 4.4 ==================");
+    var app = applicationContext()
+    console.log("isSurge:" + app.isSurge);
+    console.log("isRequest:" + app.isRequest);
+    GetCookie(app);
+    await Promise.all([clockinPcBeta(app)]);
+}
+
+start();
+
+
