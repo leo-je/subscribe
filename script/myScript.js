@@ -44,10 +44,14 @@ function applicationContext() {
         return response
     }
     const get = (options, callback) => {
+        console.log("app get")
         options.headers['User-Agent'] = 'JD4iPhone/167169 (iPhone; iOS 13.4.1; Scale/3.00)'
         if (isSurge) {
+            console.log("app get start")
             options.headers['X-Surge-Skip-Scripting'] = false
             $httpClient.get(options, (error, response, body) => {
+                console.log(error)
+                console.log(body)
                 callback(error, adapterStatus(response), body)
             })
         }
@@ -146,6 +150,7 @@ function clockinPcBeta(app) {
             console.log(data)
             try {
                 if (error) {
+                    console.log(error)
                     throw new Error(error)
                 } else {
                     app.notify("pcBeta", "", '签到成功')
