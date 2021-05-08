@@ -135,7 +135,7 @@ function GetCookie(app) {
     }
 }
 
-function clockinPcBeta(app) {
+async function clockinPcBeta(app) {
     try {
         console.log("执行签到")
         var cv = app.read("CookiepcBeta");
@@ -146,32 +146,37 @@ function clockinPcBeta(app) {
                 Cookie: cv,
             }
         };
-        app.get(JDBUrl, function (error, response, data) {
-            console.log(data)
-            try {
-                if (error) {
-                    console.log(error)
-                    throw new Error(error)
-                } else {
-                    app.notify("pcBeta", "", '签到成功')
+        app.get(JDBUrl, async function (error, response, data) {
+                console.log(data)
+                try {
+                    if (error) {
+                        console.log(error)
+                        throw new Error(error)
+                    } else {
+                        app.notify("pcBeta", "", '签到成功')
+                    }
+                } catch (eor) {
+                    app.notify("pcBeta", "", '签到失败', eor)
+                } finally {
+                    reject()
                 }
-            } catch (eor) {
-                app.notify("pcBeta", "", '签到失败', eor)
             }
-        })
-    } catch (e) {
+        )
+    } catch
+        (e) {
         console.error(e)
     }
 
 }
 
-function start() {
-    console.log("myScript:==================== version 4.4.6 ==================");
+async function start() {
+    console.log("myScript:==================== version 4.4.7 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
     GetCookie(app);
-    clockinPcBeta(app);
+    await clockinPcBeta(app);
+    console.log("app end")
 }
 
 start();
