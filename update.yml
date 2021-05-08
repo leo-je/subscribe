@@ -12,6 +12,7 @@ proxies:
   - {name: 顺丰资源YouTube 23, server: 194.41.112.11, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
   - {name: 节点1, server: 45.76.110.29, port: 80, type: vmess, uuid: b9afdd65-be5d-44f9-f3ee-6c0e5045ed8f, alterId: 64, cipher: auto, tls: false}
   - {name: 代码提交, server: 10.19.2.5, port: 48629, type: vmess, uuid: 4d32a05b-91fb-11eb-b467-286ed498c641, alterId: 0, cipher: auto, tls: false}
+  - {name: My-trojan-name, server: s20.newword.site, port: 443, type: trojan, password: 8e80c93e-98ec-4c53-b4c9-113dff6032db, sni: s20.newword.site, skip-cert-verify: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -24,6 +25,7 @@ proxy-groups:
       - 顺丰资源YouTube 19
       - 顺丰资源YouTube 23
       - 节点1
+      - My-trojan-name
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -35,6 +37,7 @@ proxy-groups:
       - 顺丰资源YouTube 19
       - 顺丰资源YouTube 23
       - 节点1
+      - My-trojan-name
   - name: 🌍 国外媒体
     type: select
     proxies:
