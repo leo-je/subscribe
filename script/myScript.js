@@ -1,4 +1,4 @@
-function nobyda() {
+function applicationContext() {
     const start = Date.now()
     const isRequest = typeof $request != "undefined"
     const isSurge = typeof $httpClient != "undefined"
@@ -234,10 +234,10 @@ function nobyda() {
 };
 
 console.log("myScript:==================== version 2 ==================");
-var $nobyda = nobyda()
-console.log("isJSBox:"+$nobyda.isJSBox);
-console.log("isLoon:"+$nobyda.isLoon);
-console.log("isSurge:"+$nobyda.isSurge);
-console.log("isQuanX:"+$nobyda.isQuanX);
-console.log("isRequest:"+$nobyda.isRequest);
+var app = applicationContext()
+console.log("isJSBox:"+app.isJSBox);
+console.log("isLoon:"+app.isLoon);
+console.log("isSurge:"+app.isSurge);
+console.log("isQuanX:"+app.isQuanX);
+console.log("isRequest:"+app.isRequest);
 //$nobyda.notify("小火箭","myScript","测试")
