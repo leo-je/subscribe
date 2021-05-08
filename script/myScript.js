@@ -98,6 +98,9 @@ function applicationContext() {
 function GetCookie(app) {
     try {
         console.log("myScript:" + $request.url)
+        if ($request.url === "http://www.example.com/") {
+            return;
+        }
         if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/') {
             console.log($request.url)
             // 提取ck数据
@@ -125,7 +128,7 @@ function GetCookie(app) {
     }
 }
 
-console.log("myScript:==================== version 4.2 ==================");
+console.log("myScript:==================== version 4.3 ==================");
 var app = applicationContext()
 console.log("isSurge:" + app.isSurge);
 console.log("isRequest:" + app.isRequest);
