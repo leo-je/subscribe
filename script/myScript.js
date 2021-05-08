@@ -121,7 +121,7 @@ function GetCookie(app) {
             app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
         }
     } catch (eor) {
-        app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️')
+        app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️',eor)
         console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
     } finally {
         app.done()
@@ -158,7 +158,7 @@ function clockinPcBeta(app) {
 }
 
 async function start() {
-    console.log("myScript:==================== version 4.4 ==================");
+    console.log("myScript:==================== version 4.4.1 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
