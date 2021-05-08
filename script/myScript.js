@@ -97,11 +97,13 @@ function applicationContext() {
 
 function GetCookie(app) {
     try {
-        console.log("myScript:" + $request.url)
-        if ($request.url === "http://www.example.com/") {
+
+
+        if (typeof $request === 'undefined' || $request.url === "http://www.example.com/") {
             return;
         }
-        if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/') {
+        console.log("myScript:" + $request.url)
+        if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/' && $request.url !== "http://www.example.com/") {
             console.log($request.url)
             // 提取ck数据
             let CV = ($request.headers['Cookie'] || $request.headers['cookie'] || '').replace(/ /g, '');
@@ -121,7 +123,8 @@ function GetCookie(app) {
             app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
         }
     } catch (eor) {
-        app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️',eor)
+        console.log(eor)
+        app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️', eor)
         console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
     } finally {
         app.done()
@@ -158,7 +161,7 @@ function clockinPcBeta(app) {
 }
 
 async function start() {
-    console.log("myScript:==================== version 4.4.1 ==================");
+    console.log("myScript:==================== version 4.4.2 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
