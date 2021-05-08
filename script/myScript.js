@@ -95,70 +95,38 @@ function applicationContext() {
     }
 };
 
-function GetCookie() {
+function GetCookie(app) {
     try {
+        console.log("myScript:" + $request.url)
         if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/') {
-            let acObj = {};
+            console.log($request.url)
             // 提取ck数据
             let CV = ($request.headers['Cookie'] || $request.headers['cookie'] || '').replace(/ /g, '');
-            let ckItems = CV.split(';').filter(s => /^(pt_key|pt_pin)=.+/.test(s)).sort();
-            if (ckItems.length == 2) {
-                acObj.cookie = ckItems.join(';') + ';';
-                acObj.userName = decodeURIComponent(acObj.cookie.match(/pt_pin=(.+?);/)[1]);
-            }
-            // 无cookie数据进行提示，有ck数据，找到账号位进行存储
-            if (!acObj.cookie) {
-                $nobyda.notify("写入京东Cookie失败", "", "请查看脚本内说明, 登录网页获取 ‼️")
+            let ckItems = CV.split(';');
+            if (ckItems.length <= 0) {
+                app.notify("pcBeta", "", "读取Cookie失败️")
                 return
             } else {
-                const allCk = [$nobyda.read('CookieJD'), $nobyda.read('CookieJD2')];
-                const ocks = $nobyda.read('CookiesJD');
-                let oldCks = [];
-                try {
-                    oldCks = (ocks && JSON.parse(ocks)) || [];
-                } catch (e) {
-                    console.log(`写入京东Cookie时转换京东扩展账号数据CookiesJD异常，扩展账号信息：\n${ocks}`)
-                    oldCks = [];
-                }
-                oldCks.forEach(item => allCk.push(item.cookie));
-                let [status, seatNo] = chooseSeatNo(acObj.cookie, allCk, /pt_pin=(.+?);/);
-                if (status) {
-                    if (status > 0) {
-                        let WT = '';
-                        if (seatNo < 2) {
-                            WT = $nobyda.write(acObj.cookie, `CookieJD${seatNo ? seatNo + 1 : ''}`);
-                        } else {
-                            if (oldCks.length <= seatNo - 2) {
-                                oldCks.push(acObj);
-                            } else {
-                                oldCks[seatNo - 2] = acObj;
-                            }
-                            WT = $nobyda.write(JSON.stringify(oldCks, null, 2), 'CookiesJD');
-                        }
-                        $nobyda.notify(`用户名: ${acObj.userName}`, ``, `${status == 2 ? `更新` : `写入`}京东 [账号${seatNo + 1}] Cookie${WT ? `成功 🎉` : `失败 ‼️`}`)
-                    } else {
-                        console.log(`\n用户名: ${acObj.userName}\n与历史京东 [账号${seatNo + 1}] Cookie相同, 跳过写入 ⚠️`)
-                    }
-                }
+                //const cookiepcBeta = $nobyda.read('CookiepcBeta');
+                let WT = '';
+                WT = app.write(CV, `CookiepcBeta`);
+                app.notify(`用户名: ${acObj.userName}`, ``, `${status == 2 ? `更新` : `写入`}京东 [账号${seatNo + 1}] Cookie${WT ? `成功 🎉` : `失败 ‼️`}`)
             }
         } else if ($request.url === 'http://www.apple.com/') {
-            $nobyda.notify("京东签到", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
+            app.notify("pcBeta", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
         } else {
-            $nobyda.notify("京东签到", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
+            app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
         }
     } catch (eor) {
-        $nobyda.write("", "CookieJD")
-        $nobyda.write("", "CookieJD2")
-        $nobyda.write("", "CookiesJD")
-        $nobyda.notify("写入京东Cookie失败", "", '已尝试清空历史Cookie, 请重试 ⚠️')
-        console.log(`\n写入京东Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
+        app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️')
+        console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
     } finally {
-        $nobyda.done()
+        // app.done()
     }
 }
 
-console.log("myScript:==================== version 3.1 ==================");
+console.log("myScript:==================== version 4 ==================");
 var app = applicationContext()
 console.log("isSurge:" + app.isSurge);
 console.log("isRequest:" + app.isRequest);
-//$nobyda.notify("小火箭","myScript","测试")
+GetCookie(app);
