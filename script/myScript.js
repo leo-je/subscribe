@@ -233,6 +233,11 @@ function nobyda() {
     }
 };
 
-console.log("myScript:==================== version 1 ==================");
+console.log("myScript:==================== version 2 ==================");
 var $nobyda = nobyda()
-$nobyda.notify("小火箭","myScript","测试")
+console.log("isJSBox:"+$nobyda.isJSBox);
+console.log("isLoon:"+$nobyda.isLoon);
+console.log("isSurge:"+$nobyda.isSurge);
+console.log("isQuanX:"+$nobyda.isQuanX);
+console.log("isRequest:"+$nobyda.isRequest);
+//$nobyda.notify("小火箭","myScript","测试")
