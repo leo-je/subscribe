@@ -182,7 +182,7 @@ async function start() {
     console.log("app end")
 }
 
-const $ = new Env("pcBeta签到");
+const $ = new Env("pcbeta-签到");
 start();
 
 
