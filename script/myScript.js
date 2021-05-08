@@ -44,10 +44,11 @@ function applicationContext() {
         return response
     }
     const get = (options, callback) => {
-        console.log("app get")
         options.headers['User-Agent'] = 'JD4iPhone/167169 (iPhone; iOS 13.4.1; Scale/3.00)'
         if (isSurge) {
-            console.log("app get start")
+            console.log("app get start get")
+            console.log(JSON.stringify(options))
+            console.log(JSON.stringify($httpClient))
             options.headers['X-Surge-Skip-Scripting'] = false
             $httpClient.get(options, (error, response, body) => {
                 console.log(error)
@@ -170,7 +171,7 @@ async function clockinPcBeta(app) {
 }
 
 async function start() {
-    console.log("myScript:==================== version 4.4.7 ==================");
+    console.log("myScript:==================== version 4.4.8 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
