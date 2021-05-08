@@ -2,7 +2,7 @@ const $ = new Env("pcbeta-签到");
 start();
 
 async function start() {
-    console.log("myScript:==================== version 4.4.11 ==================");
+    console.log("myScript:==================== version 4.4.12 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
@@ -154,7 +154,7 @@ function clockinPcBeta(app) {
         try {
             console.log("执行签到")
             const cv = app.read("CookiepcBeta");
-            console.log("cookie:" + cv)
+            // console.log("cookie:" + cv)
             const options = {
                 url: "http://bbs.pcbeta.com/home.php?mod=task&do=apply&id=149",
                 headers: {
@@ -168,6 +168,7 @@ function clockinPcBeta(app) {
                     "Accept-Encoding": "gzip, deflate, br"
                 }
             }
+            console.log(options)
             $.get(options, (err, resp, data) => {
                 try {
                     if (err) {
