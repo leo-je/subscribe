@@ -173,7 +173,7 @@ async function clockinPcBeta(app) {
 }
 
 async function start() {
-    console.log("myScript:==================== version 4.4.9 ==================");
+    console.log("myScript:==================== version 4.4.10 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
