@@ -125,7 +125,7 @@ function GetCookie(app) {
     }
 }
 
-console.log("myScript:==================== version 4 ==================");
+console.log("myScript:==================== version 4.1 ==================");
 var app = applicationContext()
 console.log("isSurge:" + app.isSurge);
 console.log("isRequest:" + app.isRequest);
