@@ -134,12 +134,13 @@ function GetCookie(app) {
 function clockinPcBeta(app) {
     try {
         console.log("执行签到")
+        var cv = app.read("CookiepcBeta");
+        console.log("cookie:" + cv)
         const JDBUrl = {
             url: 'http://bbs.pcbeta.com/home.php?mod=task&do=apply&id=149',
             headers: {
-                Cookie: app.read("CookiepcBeta")
-            },
-            body: 'functionId=signBeanIndex&appid=ld'
+                Cookie: cv,
+            }
         };
         app.get(JDBUrl, function (error, response, data) {
             console.log(data)
@@ -159,8 +160,8 @@ function clockinPcBeta(app) {
 
 }
 
-async function start() {
-    console.log("myScript:==================== version 4.4.5 ==================");
+function start() {
+    console.log("myScript:==================== version 4.4.6 ==================");
     var app = applicationContext()
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
