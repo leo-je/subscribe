@@ -1,6 +1,6 @@
 const app = applicationContext();
 !(async () => {
-    start(app)
+    await start(app)
 })().catch(e => {
     app.AnError("pcDBeta", e)
 }).finally(() => {
@@ -8,7 +8,7 @@ const app = applicationContext();
 })
 
 async function start(app) {
-    console.log("myScript:==================== version 4.4.14 ==================");
+    console.log("myScript:==================== version 4.4.15 ==================");
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
     await GetCookie(app);
@@ -111,6 +111,7 @@ function applicationContext() {
 };
 
 function GetCookie(app) {
+    console.log("pcBeta cookie")
     return new Promise(resolve => {
         try {
             if (typeof $request === 'undefined' || $request.url === "http://www.example.com/") {
@@ -147,8 +148,8 @@ function GetCookie(app) {
 }
 
 function clockinPcBeta(app) {
+    console.log("执行签到")
     return new Promise(resolve => {
-        console.log("执行签到")
         const cv = app.read("CookiepcBeta");
         // console.log("cookie:" + cv)
         const options = {
