@@ -8,7 +8,7 @@ const app = applicationContext();
 })
 
 async function start(app) {
-    console.log("myScript:==================== version 4.4.13 ==================");
+    console.log("myScript:==================== version 4.4.14 ==================");
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
     await GetCookie(app);
