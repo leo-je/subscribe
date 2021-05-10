@@ -8,13 +8,90 @@ const app = applicationContext();
 })
 
 async function start(app) {
-    console.log("myScript:==================== version 4.4.15 ==================");
+    console.log("myScript:==================== version 4.4.16 ==================");
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
     await GetCookie(app);
     await clockinPcBeta(app);
     console.log("app end")
 }
+
+function GetCookie(app) {
+    console.log("pcBeta cookie")
+    return new Promise(resolve => {
+        try {
+            if (typeof $request === 'undefined' || $request.url === "http://www.example.com/") {
+                return;
+            }
+            console.log("myScript:" + $request.url)
+            if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/' && $request.url !== "http://www.example.com/") {
+                console.log($request.url)
+                // 提取ck数据
+                let CV = ($request.headers['Cookie'] || $request.headers['cookie'] || '').replace(/ /g, '');
+                let ckItems = CV.split(';');
+                if (ckItems.length <= 0) {
+                    app.notify("pcBeta", "", "读取Cookie失败️")
+                    return
+                } else {
+                    //const cookiepcBeta = $nobyda.read('CookiepcBeta');
+                    let WT = '';
+                    WT = app.write(CV, `CookiepcBeta`);
+                    app.notify(`pcBeta`, ``, `保存cookie成功`)
+                }
+            } else if ($request.url === 'http://www.apple.com/') {
+                app.notify("pcBeta", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
+            } else {
+                app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
+            }
+        } catch (eor) {
+            console.log(eor)
+            app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️', eor)
+            console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
+        } finally {
+            resolve();
+        }
+    });
+}
+
+function clockinPcBeta(app) {
+    console.log("执行签到")
+    return new Promise(resolve => {
+        const cv = app.read("CookiepcBeta");
+        // console.log("cookie:" + cv)
+        const options = {
+            url: "http://bbs.pcbeta.com/home.php?mod=task&do=apply&id=149",
+            headers: {
+                Host: "bbs.pcbeta.com",
+                Accept: "*/*",
+                Connection: "keep-alive",
+                Cookie: cv,
+                "User-Agent": "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+                "Accept-Language": "zh-cn",
+                "Referer": "http://bbs.pcbeta.com",
+                "Accept-Encoding": "gzip, deflate, br"
+            }
+        }
+        console.log(options)
+        $httpClient.get(options, (err, resp, data) => {
+            try {
+                if (err) {
+                    app$.AnError(err)
+                } else {
+                    if (data) {
+                        console.log(data)
+                    } else {
+                        console.log('服务器返回空数据');
+                    }
+                }
+            } catch (e) {
+                app.AnError("pcBeta:签到", e)
+            } finally {
+                resolve();
+            }
+        })
+    });
+}
+
 
 function applicationContext() {
     const start = Date.now()
@@ -86,7 +163,7 @@ function applicationContext() {
             })
         }
     }
-    const AnError = (name, keyname, er, resp, body) => {
+    const AnError = (name, er, resp, body) => {
         return console.log(`\n‼️${name}发生错误\n‼️名称: ${er.name}\n‼️描述: ${er.message}${JSON.stringify(er).match(/\"line\"/) ? `\n‼️行列: ${JSON.stringify(er)}` : ``}${resp && resp.status ? `\n‼️状态: ${resp.status}` : ``}${body ? `\n‼️响应: ${resp && resp.status != 503 ? body : `Omit.`}` : ``}`)
     }
     const time = () => {
@@ -109,81 +186,5 @@ function applicationContext() {
         done
     }
 };
-
-function GetCookie(app) {
-    console.log("pcBeta cookie")
-    return new Promise(resolve => {
-        try {
-            if (typeof $request === 'undefined' || $request.url === "http://www.example.com/") {
-                return;
-            }
-            console.log("myScript:" + $request.url)
-            if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/' && $request.url !== "http://www.example.com/") {
-                console.log($request.url)
-                // 提取ck数据
-                let CV = ($request.headers['Cookie'] || $request.headers['cookie'] || '').replace(/ /g, '');
-                let ckItems = CV.split(';');
-                if (ckItems.length <= 0) {
-                    app.notify("pcBeta", "", "读取Cookie失败️")
-                    return
-                } else {
-                    //const cookiepcBeta = $nobyda.read('CookiepcBeta');
-                    let WT = '';
-                    WT = app.write(CV, `CookiepcBeta`);
-                    app.notify(`pcBeta`, ``, `保存cookie成功`)
-                }
-            } else if ($request.url === 'http://www.apple.com/') {
-                app.notify("pcBeta", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
-            } else {
-                app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
-            }
-        } catch (eor) {
-            console.log(eor)
-            app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️', eor)
-            console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
-        } finally {
-            resolve();
-        }
-    });
-}
-
-function clockinPcBeta(app) {
-    console.log("执行签到")
-    return new Promise(resolve => {
-        const cv = app.read("CookiepcBeta");
-        // console.log("cookie:" + cv)
-        const options = {
-            url: "http://bbs.pcbeta.com/home.php?mod=task&do=apply&id=149",
-            headers: {
-                Host: "bbs.pcbeta.com",
-                Accept: "*/*",
-                Connection: "keep-alive",
-                Cookie: cv,
-                "User-Agent": "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-                "Accept-Language": "zh-cn",
-                "Referer": "http://bbs.pcbeta.com",
-                "Accept-Encoding": "gzip, deflate, br"
-            }
-        }
-        console.log(options)
-        $.get(options, (err, resp, data) => {
-            try {
-                if (err) {
-                    $.logErr(err)
-                } else {
-                    if (data) {
-                        console.log(data)
-                    } else {
-                        $.log('服务器返回空数据');
-                    }
-                }
-            } catch (e) {
-                $.logErr(e)
-            } finally {
-                resolve();
-            }
-        })
-    });
-}
 
 
