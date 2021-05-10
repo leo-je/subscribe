@@ -11,7 +11,7 @@ async function start(app) {
     console.log("myScript:==================== version 4.4.13 ==================");
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
-    GetCookie(app);
+    await GetCookie(app);
     await clockinPcBeta(app);
     console.log("app end")
 }
@@ -111,41 +111,43 @@ function applicationContext() {
 };
 
 function GetCookie(app) {
-    try {
-        if (typeof $request === 'undefined' || $request.url === "http://www.example.com/") {
-            return;
-        }
-        console.log("myScript:" + $request.url)
-        if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/' && $request.url !== "http://www.example.com/") {
-            console.log($request.url)
-            // 提取ck数据
-            let CV = ($request.headers['Cookie'] || $request.headers['cookie'] || '').replace(/ /g, '');
-            let ckItems = CV.split(';');
-            if (ckItems.length <= 0) {
-                app.notify("pcBeta", "", "读取Cookie失败️")
-                return
-            } else {
-                //const cookiepcBeta = $nobyda.read('CookiepcBeta');
-                let WT = '';
-                WT = app.write(CV, `CookiepcBeta`);
-                app.notify(`pcBeta`, ``, `保存cookie成功`)
+    return new Promise(resolve => {
+        try {
+            if (typeof $request === 'undefined' || $request.url === "http://www.example.com/") {
+                return;
             }
-        } else if ($request.url === 'http://www.apple.com/') {
-            app.notify("pcBeta", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
-        } else {
-            app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
+            console.log("myScript:" + $request.url)
+            if ($request.method != 'OPTIONS' && $request.headers && $request.url !== 'http://www.apple.com/' && $request.url !== "http://www.example.com/") {
+                console.log($request.url)
+                // 提取ck数据
+                let CV = ($request.headers['Cookie'] || $request.headers['cookie'] || '').replace(/ /g, '');
+                let ckItems = CV.split(';');
+                if (ckItems.length <= 0) {
+                    app.notify("pcBeta", "", "读取Cookie失败️")
+                    return
+                } else {
+                    //const cookiepcBeta = $nobyda.read('CookiepcBeta');
+                    let WT = '';
+                    WT = app.write(CV, `CookiepcBeta`);
+                    app.notify(`pcBeta`, ``, `保存cookie成功`)
+                }
+            } else if ($request.url === 'http://www.apple.com/') {
+                app.notify("pcBeta", "", "类型错误, 手动运行请选择上下文环境为Cron ⚠️");
+            } else {
+                app.notify("pcBeta", "写入Cookie失败", "请检查匹配URL或配置内脚本类型 ⚠️");
+            }
+        } catch (eor) {
+            console.log(eor)
+            app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️', eor)
+            console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
+        } finally {
+            resolve();
         }
-    } catch (eor) {
-        console.log(eor)
-        app.notify("pcBeta", "", '写入Cookie失败, 请重试 ⚠️', eor)
-        console.log(`\n写入Cookie出现错误 ‼️\n${JSON.stringify(eor)}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`)
-    } finally {
-        app.done()
-    }
+    });
 }
 
 function clockinPcBeta(app) {
-    return new Promise(async resolve => {
+    return new Promise(resolve => {
         console.log("执行签到")
         const cv = app.read("CookiepcBeta");
         // console.log("cookie:" + cv)
