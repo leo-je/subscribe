@@ -8,7 +8,7 @@ const app = applicationContext();
 })
 
 async function start(app) {
-    console.log("myScript:==================== version 4.4.17 ==================");
+    console.log("myScript:==================== version 4.4.18 ==================");
     console.log("isSurge:" + app.isSurge);
     console.log("isRequest:" + app.isRequest);
     await GetCookie(app);
@@ -77,9 +77,10 @@ function clockinPcBeta(app) {
                 if (err) {
                     app.AnError(err)
                 } else {
-                    if (data && data.indexOf("恭喜您")) {
+                    if (data && data.indexOf("恭喜您") != -1) {
                         console.log(data)
-                    } else if (data && data.indexOf("请下期再来")) {
+                        app.notify("pcBeta", "", "签到成功")
+                    } else if (data && data.indexOf("请下期再来") != -1) {
                         app.notify("pcBeta", "签到失败", "重复签到")
                     } else {
                         app.notify("pcBeta", "签到失败", "签到失败")
