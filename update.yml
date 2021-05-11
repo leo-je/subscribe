@@ -54,7 +54,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-  - name: 工作网络
+  - name: 📒工作网络
     type: select
     proxies:
       - 🔰 节点选择
