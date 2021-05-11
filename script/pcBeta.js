@@ -97,7 +97,7 @@ function clockinPcBeta(app) {
 
 
 function applicationContext() {
-    const start = Date.now()
+    const startTime = Date.now()
     const isRequest = typeof $request != "undefined"
     const isSurge = typeof $httpClient != "undefined"
     const notify = (title, subtitle, message, rawopts) => {
@@ -169,10 +169,7 @@ function applicationContext() {
     const AnError = (name, er, resp, body) => {
         return console.log(`\n‼️${name}发生错误\n‼️名称: ${er.name}\n‼️描述: ${er.message}${JSON.stringify(er).match(/\"line\"/) ? `\n‼️行列: ${JSON.stringify(er)}` : ``}${resp && resp.status ? `\n‼️状态: ${resp.status}` : ``}${body ? `\n‼️响应: ${resp && resp.status != 503 ? body : `Omit.`}` : ``}`)
     }
-    const time = () => {
-        const end = ((Date.now() - start) / 1000).toFixed(2)
-        return console.log('\n签到用时: ' + end + ' 秒')
-    }
+
     const done = (value = {}) => {
         if (isSurge) isRequest ? $done(value) : $done()
     }
@@ -185,7 +182,7 @@ function applicationContext() {
         read,
         get,
         post,
-        time,
+        startTime,
         done
     }
 };
