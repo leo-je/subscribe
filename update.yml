@@ -7,6 +7,7 @@ external-controller: :9090
 proxies:
   - {name: 节点1, server: 45.76.110.29, port: 80, type: vmess, uuid: b9afdd65-be5d-44f9-f3ee-6c0e5045ed8f, alterId: 64, cipher: auto, tls: false}
   - {name: 代码提交, server: 10.19.2.5, port: 48629, type: vmess, uuid: 4d32a05b-91fb-11eb-b467-286ed498c641, alterId: 0, cipher: auto, tls: false}
+  - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: 8e80c93e-98ec-4c53-b4c9-113dff6032db, sni: ag2.newword.site, skip-cert-verify: true}
   - {name: trojan-1, server: s20.newword.site, port: 443, type: trojan, password: 8e80c93e-98ec-4c53-b4c9-113dff6032db, sni: s20.newword.site, skip-cert-verify: true}
   - {name: trojan-2, server: s19.newword.site, port: 443, type: trojan, password: 8e80c93e-98ec-4c53-b4c9-113dff6032db, sni: s19.newword.site, skip-cert-verify: true}
 proxy-groups:
@@ -17,6 +18,7 @@ proxy-groups:
       - 🎯 全球直连
       - 代码提交
       - 节点1
+      - trojan-0
       - trojan-1
       - trojan-2
   - name: ♻️ 自动选择
@@ -25,6 +27,7 @@ proxy-groups:
     interval: 300
     proxies:
       - 节点1
+      - trojan-0
       - trojan-1
       - trojan-2
   - name: 🌍 国外媒体
@@ -76,8 +79,8 @@ proxy-groups:
       - ♻️ 自动选择
 rules:
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
- - IP-CIDR,10.12.0.0/16,工作网络,no-resolve
- - IP-CIDR,10.10.0.0/16,工作网络,no-resolve
+ - IP-CIDR,10.12.0.0/16,📒工作网络,no-resolve
+ - IP-CIDR,10.10.0.0/16,📒工作网络,no-resolve
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
  - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
  - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
@@ -10102,7 +10105,7 @@ rules:
  - DOMAIN-SUFFIX,caih.com,🎯 全球直连
  - DOMAIN,download.jetbrains.com,🎯 全球直连
  - DOMAIN,images-cn.ssl-images-amazon.com,🎯 全球直连
- - DOMAIN,bitbucket.caih.local,工作网络
+ - DOMAIN,bitbucket.caih.local,📒工作网络
  - DOMAIN,projectmanager.local,🎯 全球直连
  - IP-CIDR,119.28.28.28/32,🎯 全球直连,no-resolve
  - IP-CIDR,182.254.116.0/24,🎯 全球直连,no-resolve
