@@ -9,10 +9,10 @@ proxies:
   - {name: 节点2, server: 45.140.169.42, port: 80, type: vmess, uuid: 81e90fae-32cb-4ab1-92bf-819639882647, alterId: 0, cipher: auto, tls: false}
   - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: ag2.newword.site, skip-cert-verify: true}
   - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-1, server: g22.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-1, server: g23.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-1, server: g24.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-1, server: g25.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-3, server: g23.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-4, server: g24.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-5, server: g25.newword.site, port: 443, type: trojan, password: 41225d14-8e77-4d74-800f-55b4fe83d58b, sni: s20.newword.site, skip-cert-verify: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -24,6 +24,9 @@ proxy-groups:
       - trojan-0
       - trojan-1
       - trojan-2
+      - trojan-3
+      - trojan-4
+      - trojan-5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -34,6 +37,9 @@ proxy-groups:
       - trojan-0
       - trojan-1
       - trojan-2
+      - trojan-3
+      - trojan-4
+      - trojan-5
   - name: 🌍 国外媒体
     type: select
     proxies:
