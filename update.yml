@@ -6,7 +6,7 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 节点1, server: els.chenpeng.work, port: 80, type: vmess, uuid: 352f489e-4f64-11eb-ade1-00155dc01d13, alterId: 6, cipher: auto, tls: false, network: ws, ws-path: /els, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 节点2, server: 45.140.169.42, port: 80, type: vmess, uuid: 81e90fae-32cb-4ab1-92bf-819639882647, alterId: 0, cipher: auto, tls: false}
+  - {name: 节点2, server: 40.74.83.200, port: 80, type: vmess, uuid: 30895685-71da-4e3e-dfdd-a7661173d659, alterId: 64, cipher: auto, tls: false}
   - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: ag2.newword.site, skip-cert-verify: true}
   - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
   - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
