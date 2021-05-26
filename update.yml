@@ -8,12 +8,12 @@ proxies:
   - {name: 节点1, server: els.chenpeng.work, port: 80, type: vmess, uuid: 352f489e-4f64-11eb-ade1-00155dc01d13, alterId: 6, cipher: auto, tls: false, network: ws, ws-path: /els, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 节点2, server: 40.74.83.200, port: 80, type: vmess, uuid: 30895685-71da-4e3e-dfdd-a7661173d659, alterId: 64, cipher: auto, tls: false}
   - {name: vm-v2, server: 10.8.10.205, port: 12233, type: vmess, uuid: bf4c3384-5df9-4c31-b28a-d2be4b097e70, alterId: 0, cipher: auto, tls: false}
-  - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: ag2.newword.site, skip-cert-verify: true}
-  - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-3, server: g23.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-4, server: g24.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-5, server: g25.newword.site, port: 443, type: trojan, password: c7aa3290-7815-4c47-91da-ede5ed3762d2, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: 0a1affca-6ac1-46cc-8180-4c32f38892dc, sni: ag2.newword.site, skip-cert-verify: true}
+  - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: 0a1affca-6ac1-46cc-8180-4c32f38892dc, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: 0a1affca-6ac1-46cc-8180-4c32f38892dc, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-3, server: g23.newword.site, port: 443, type: trojan, password: 0a1affca-6ac1-46cc-8180-4c32f38892dc, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-4, server: g24.newword.site, port: 443, type: trojan, password: 0a1affca-6ac1-46cc-8180-4c32f38892dc, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: trojan-5, server: g25.newword.site, port: 443, type: trojan, password: 0a1affca-6ac1-46cc-8180-4c32f38892dc, sni: s20.newword.site, skip-cert-verify: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
