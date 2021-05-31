@@ -8,7 +8,6 @@ proxies:
   - {name: 节点1, server: els.chenpeng.work, port: 80, type: vmess, uuid: 352f489e-4f64-11eb-ade1-00155dc01d13, alterId: 6, cipher: auto, tls: false, network: ws, ws-path: /els, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 节点2, server: 40.74.83.200, port: 80, type: vmess, uuid: 30895685-71da-4e3e-dfdd-a7661173d659, alterId: 64, cipher: auto, tls: false}
   - {name: vm-v2, server: 10.8.10.205, port: 12233, type: vmess, uuid: bf4c3384-5df9-4c31-b28a-d2be4b097e70, alterId: 0, cipher: auto, tls: false}
-  - {name: vless, server: 99.83.203.221, port: 443, type: vless, uuid: 87a790b4-a891-11eb-a19f-0208242f2c66, cipher: auto,alterId: 0, tls: false}
   - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: 33b751be-b753-4f26-b2e5-964224d966be, sni: ag2.newword.site, skip-cert-verify: true}
   - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: 33b751be-b753-4f26-b2e5-964224d966be, sni: s20.newword.site, skip-cert-verify: true}
   - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: 33b751be-b753-4f26-b2e5-964224d966be, sni: s20.newword.site, skip-cert-verify: true}
