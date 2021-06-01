@@ -22,7 +22,7 @@ proxy-groups:
       - 🎯 全球直连
       - 节点1
       - 节点2
-      - vm-v2
+      - test
       - trojan-0
       - trojan-1
       - trojan-2
@@ -36,7 +36,7 @@ proxy-groups:
     proxies:
       - 节点1
       - 节点2
-      - vm-v2
+      - test
       - trojan-0
       - trojan-1
       - trojan-2
