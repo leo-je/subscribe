@@ -6,7 +6,6 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 节点1, server: els.chenpeng.work, port: 80, type: vmess, uuid: 352f489e-4f64-11eb-ade1-00155dc01d13, alterId: 6, cipher: auto, tls: false, network: ws, ws-path: /els, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 节点2, server: 195.133.11.107, port: 443, type: vmess, uuid: fbc93ec8-29a1-446e-ff9a-30c84dbd1fef, alterId: 64, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 195.133.11.107}}
   - {name: 节点3, server: v2.mooncloud.top, port: 8080, type: vmess, uuid: aa84551f-2434-4284-9552-66689dacb651, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: m.t.17186.cn}}
   - {name: 节点4, server: v2.mooncloud.top, port: 53, type: vmess, uuid: aa84551f-2434-4284-9552-66689dacb651, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: m.t.17186.cn}}
   - {name: 节点5, server: emby.mooncloud.top, port: 8080, type: vmess, uuid: aa84551f-2434-4284-9552-66689dacb651, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: m.t.17186.cn}}
@@ -25,7 +24,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 节点1
-      - 节点2
       - 节点3
       - 节点4
       - 节点5
@@ -43,7 +41,6 @@ proxy-groups:
     interval: 300
     proxies:
       - 节点1
-      - 节点2
       - 节点3
       - 节点4
       - 节点5
