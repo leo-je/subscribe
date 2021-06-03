@@ -84,7 +84,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - vm-v2
+      - test
   - name: 🎯 全球直连
     type: select
     proxies:
