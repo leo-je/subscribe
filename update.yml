@@ -17,6 +17,7 @@ proxies:
   - {name: trojan-3, server: g23.newword.site, port: 443, type: trojan, password: 33b751be-b753-4f26-b2e5-964224d966be, sni: s20.newword.site, skip-cert-verify: true}
   - {name: trojan-4, server: g24.newword.site, port: 443, type: trojan, password: 33b751be-b753-4f26-b2e5-964224d966be, sni: s20.newword.site, skip-cert-verify: true}
   - {name: trojan-5, server: g25.newword.site, port: 443, type: trojan, password: 33b751be-b753-4f26-b2e5-964224d966be, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: 🇸🇬 aws新加坡juzi, server: juzisg1.qqnz.com.cn, port: 443, type: vmess, uuid: 990e1194-eca7-445b-9daa-ebdc292382e7, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /vmessws, ws-headers: {Host: juzisg1.qqnz.com.cn}}
   - {name: 🇺🇸 美国 顺丰资源Youtube, server: 84.17.35.118, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
   - {name: 🇺🇸 美国 顺丰资源Youtube 2, server: 84.17.35.118, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
   - {name: 🇺🇸 美国 顺丰资源Youtube 3, server: 84.17.35.118, port: 34815, type: ss, cipher: aes-256-gcm, password: LkFAzkzXkSCRYa2CsRdL8cGb}
@@ -96,6 +97,7 @@ proxy-groups:
       - trojan-3
       - trojan-4
       - trojan-5
+      - 🇸🇬 aws新加坡juzi
       - 🇺🇸 美国 顺丰资源Youtube
       - 🇺🇸 美国 顺丰资源Youtube 2
       - 🇺🇸 美国 顺丰资源Youtube 3
@@ -174,6 +176,7 @@ proxy-groups:
       - trojan-3
       - trojan-4
       - trojan-5
+      - 🇸🇬 aws新加坡juzi
       - 🇺🇸 美国 顺丰资源Youtube
       - 🇺🇸 美国 顺丰资源Youtube 2
       - 🇺🇸 美国 顺丰资源Youtube 3
