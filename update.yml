@@ -10296,6 +10296,7 @@ rules:
  - DOMAIN-SUFFIX,zhimg.com,🎯 全球直连
  - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
  - DOMAIN-SUFFIX,caih.com,🎯 全球直连
+ - DOMAIN-SUFFIX,caih.docker,🎯 全球直连
  - DOMAIN,download.jetbrains.com,🎯 全球直连
  - DOMAIN,images-cn.ssl-images-amazon.com,🎯 全球直连
  - DOMAIN,bitbucket.caih.local,📒工作网络
