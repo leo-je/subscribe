@@ -6,6 +6,7 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: test, server: 10.8.10.205, port: 12233, type: vmess, uuid: bf4c3384-5df9-4c31-b28a-d2be4b097e70, alterId: 0, cipher: auto, tls: false}
+  - {name: 🇭🇰 爱奇艺+&dereplication=false①AZ香港1000m, server: 13.94.36.194, port: 80, type: vmess, uuid: 7165d073-edec-4294-8e32-ba81f793c1fa, alterId: 1, cipher: auto, tls: false}
   - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: ag2.newword.site, skip-cert-verify: true}
   - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
   - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
@@ -81,6 +82,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - test
+      - 🇭🇰 爱奇艺+&dereplication=false①AZ香港1000m
       - trojan-0
       - trojan-1
       - trojan-2
