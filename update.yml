@@ -6,13 +6,7 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: test, server: 10.8.10.205, port: 12233, type: vmess, uuid: bf4c3384-5df9-4c31-b28a-d2be4b097e70, alterId: 0, cipher: auto, tls: false}
-  - {name: 🇭🇰 爱奇艺+&dereplication=false①AZ香港1000m, server: 13.94.36.194, port: 80, type: vmess, uuid: 7165d073-edec-4294-8e32-ba81f793c1fa, alterId: 1, cipher: auto, tls: false}
-  - {name: trojan-0, server: ag2.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: ag2.newword.site, skip-cert-verify: true}
-  - {name: trojan-1, server: g21.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-2, server: g22.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-3, server: g23.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-4, server: g24.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
-  - {name: trojan-5, server: g25.newword.site, port: 443, type: trojan, password: b42690e2-670e-48ce-8ed2-94c65b6a0c9a, sni: s20.newword.site, skip-cert-verify: true}
+  - {name: 🇸🇬 V2云千兆白嫖节点新加坡1 ➤ x1, server: 168.63.244.237, port: 80, type: vmess, uuid: 5b7d91c6-646e-3f15-864a-f132e9559ef7, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 168.63.244.237}}
   - {name: 🇸🇬 aws新加坡juzi, server: juzisg1.qqnz.com.cn, port: 443, type: vmess, uuid: 990e1194-eca7-445b-9daa-ebdc292382e7, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /vmessws, ws-headers: {Host: juzisg1.qqnz.com.cn}}
   - {name: 🇺🇸 美国 顺丰资源Youtube, server: 84.17.35.118, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
   - {name: 🇺🇸 美国 顺丰资源Youtube 2, server: 84.17.35.118, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
@@ -82,13 +76,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - test
-      - 🇭🇰 爱奇艺+&dereplication=false①AZ香港1000m
-      - trojan-0
-      - trojan-1
-      - trojan-2
-      - trojan-3
-      - trojan-4
-      - trojan-5
+      - 🇸🇬 V2云千兆白嫖节点新加坡1 ➤ x1
       - 🇸🇬 aws新加坡juzi
       - 🇺🇸 美国 顺丰资源Youtube
       - 🇺🇸 美国 顺丰资源Youtube 2
@@ -156,12 +144,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - trojan-0
-      - trojan-1
-      - trojan-2
-      - trojan-3
-      - trojan-4
-      - trojan-5
       - 🇸🇬 aws新加坡juzi
       - 🇺🇸 美国 顺丰资源Youtube
       - 🇺🇸 美国 顺丰资源Youtube 2
