@@ -4,6 +4,7 @@
 <array>
 	<string>192.168.0.0/16</string>
 	<string>172.16.0.0/12</string>
+	<string>10.19.0.0/16</string>
 	<string>127.0.0.1</string>
 	<string>localhost</string>
 	<string>*.crashlytics.com</string>
